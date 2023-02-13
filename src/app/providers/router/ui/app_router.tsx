@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from 'shared/config/route_config/route_config';
-import { PageLoader } from 'widgets/page_loader/page_loader';
+import { PageLoader } from 'widgets/page_loader/ui/page_loader';
 
 export const AppRouter = () => (
     <Suspense fallback={<PageLoader />}>
