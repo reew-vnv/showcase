@@ -24,4 +24,7 @@ export default {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jest_empty_component.tsx'),
     },
+    globals: {
+        __IS_DEV__: true,
+    },
 };
