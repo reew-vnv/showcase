@@ -6,10 +6,15 @@
     border-radius: 4px;
 }
 
-.clear {
+.clear,
+.clear_inverted {
     border: none;
     background: none;
     outline: none;
+}
+
+.clear_inverted {
+    color: var(--inverted-primary-color);
 }
 
 .outline {
@@ -24,7 +29,7 @@
     border: none;
 }
 
-.backgroundInverted {
+.background_inverted {
     background: var(--inverted-bg-color);
     color: var(--inverted-primary-color);
     border: none;
