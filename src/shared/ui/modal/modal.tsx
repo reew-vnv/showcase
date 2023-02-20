@@ -3,7 +3,6 @@ import React, {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/portal/portal';
-import { useTheme } from 'app/providers/theme_provider';
 import cls from './modal.module.scss';
 
 const ANIMATION_DELAY = 300;
@@ -22,7 +21,6 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const { theme } = useTheme();
 
     const closeHandler = useCallback(() => {
         if (onClose) {
@@ -56,7 +54,6 @@ export const Modal = (props: ModalProps) => {
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.is_closing]: isClosing,
-        [cls[theme]]: true,
     };
     return (
         <Portal>
