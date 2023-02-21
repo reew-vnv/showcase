@@ -9,5 +9,8 @@
   "Update Page": "Обновить страницу",
   "Sign In": "Войти",
   "Type Username": "Введите имя",
-  "Type Password": "Введите пароль"
+  "Type Password": "Введите пароль",
+  "Authorization Form": "Форма Авторизации",
+  "Wrong Credentials": "Неверный логин или пароль",
+  "Sign Out": "Выйти"
 }

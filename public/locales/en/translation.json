@@ -9,5 +9,8 @@
   "Update Page": "Update Page",
   "Sign In": "Sign In",
   "Type Username": "Type Username",
-  "Type Password": "Type Password"
+  "Type Password": "Type Password",
+  "Authorization Form": "Authorization Form",
+  "Wrong Credentials": "Wrong Credentials",
+  "Sign Out": "Sign Out"
 }
