@@ -7,5 +7,7 @@
   "Page Not Found": "Страница не найдена",
   "Error Info Message": "Произошла непредвиденная ошибка",
   "Update Page": "Обновить страницу",
-  "Sign In": "Войти"
+  "Sign In": "Войти",
+  "Type Username": "Введите имя",
+  "Type Password": "Введите пароль"
 }
