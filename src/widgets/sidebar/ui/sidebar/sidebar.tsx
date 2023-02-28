@@ -1,11 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, { useState } from 'react';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/button/button';
-import { ThemeSwitcher } from 'widgets/theme_switcher';
-import { LangSwitcher } from 'widgets/lang_switcher';
-import { AppLink, AppLinkTheme } from 'shared/ui/app_link/app_link';
+import { ThemeSwitcher } from 'widgets/theme-switcher';
+import { LangSwitcher } from 'widgets/lang-switcher';
+import { AppLink, AppLinkTheme } from 'shared/ui/app-link/app-link';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/route_config/route_config';
+import { RoutePath } from 'shared/config/route-config/route-config';
 import MainIcon from 'shared/assets/icons/main.svg';
 import AboutIcon from 'shared/assets/icons/about.svg';
 import cls from './sidebar.module.scss';

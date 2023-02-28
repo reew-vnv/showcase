@@ -3,7 +3,7 @@ import React, {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { Portal } from 'shared/ui/portal/portal';
-import { useTheme } from 'app/providers/theme_provider';
+import { useTheme } from 'app/providers/theme-provider';
 import cls from './modal.module.scss';
 
 const ANIMATION_DELAY = 300;

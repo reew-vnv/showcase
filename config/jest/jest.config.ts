@@ -19,10 +19,10 @@ export default {
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     rootDir: '../../',
-    setupFilesAfterEnv: ['<rootDir>config/jest/setup_test.ts'],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setup-test.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg': path.resolve(__dirname, 'jest_empty_component.tsx'),
+        '\\.svg': path.resolve(__dirname, 'jest-empty-component.tsx'),
     },
     globals: {
         __IS_DEV__: true,

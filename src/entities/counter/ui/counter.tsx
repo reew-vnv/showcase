@@ -1,8 +1,8 @@
 import { Button, ButtonTheme } from 'shared/ui/button/button';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { getCounterValue } from '../model/selectors/get_counter_value/get_counter_value';
-import { counterActions } from '../model/slice/counter_slice';
+import { getCounterValue } from '../model/selectors/get-counter-value/get-counter-value';
+import { counterActions } from '../model/slice/counter-slice';
 
 export const Counter = () => {
     const dispatch = useDispatch();
