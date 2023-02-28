@@ -18,33 +18,16 @@
     margin-left: 20px;
 }
 
-.collapsed_btn {
-    position: absolute;
-    right: -32px;
-    bottom: 32px;
-}
-
 .items {
     margin-left: 20px;
     display: flex;
     flex-direction: column;
 }
 
-.item {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.link {
-    margin-left: 10px;
-    opacity: 1;
-}
-
-.icon {
-    width: 28px;
-    height: 28px;
-    fill: var(--inverted-primary-color);
+.collapsed_btn {
+    position: absolute;
+    right: -32px;
+    bottom: 32px;
 }
 
 .collapsed {
@@ -57,11 +40,5 @@
 
     .lang {
         margin-left: 0;
-    }
-
-    .link {
-        opacity: 0;
-        transition: 0.2s opacity;
-        width: 0;
     }
 }
