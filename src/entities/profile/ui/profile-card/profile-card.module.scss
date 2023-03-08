@@ -4,18 +4,27 @@
     border-radius: 4px;
 }
 
-.header {
-    display: flex;
-}
-
-.edit_button {
-    margin-left: auto;
-}
-
-.data {
-    margin-top: 30px;
-}
-
 .input {
     margin-top: 10px;
+}
+
+.select {
+    margin-top: 10px;
+}
+
+.loading,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar_wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.editing {
+    border: 2px solid var(--inverted-primary-color);
 }

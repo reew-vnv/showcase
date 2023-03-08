@@ -3,5 +3,14 @@
   "Profile": "Profile",
   "Edit": "Edit",
   "Firstname": "First Name",
-  "Lastname": "Last Name"
+  "Lastname": "Last Name",
+  "Profile Page Error Title": "Something happens while loading the page",
+  "Profile Page Error Text": "Try to restart page",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Age": "Age",
+  "City": "City",
+  "Type link to Avatar": "Type link to Avatar",
+  "UserName": "User Name",
+  "Choose Currency": "Choose Currency"
 }

@@ -13,5 +13,7 @@
   "Type Password": "Введите пароль",
   "Authorization Form": "Форма Авторизации",
   "Wrong Credentials": "Неверный логин или пароль",
-  "Sign Out": "Выйти"
+  "Sign Out": "Выйти",
+  "Choose Currency": "Укажите Валюту",
+  "Choose Country": "Укажите Страну"
 }

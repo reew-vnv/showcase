@@ -1,15 +1,47 @@
 {
   "posts": [
-    { "id": "1", "title": "json-server 1", "author": "typicode" },
-    { "id": "2", "title": "json-server 2", "author": "typicode" },
-    { "id": "3", "title": "json-server 3", "author": "typicode" },
-    { "id": "4", "title": "json-server 4", "author": "typicode" },
-    { "id": "5", "title": "json-server 5", "author": "typicode" },
-    { "id": "6", "title": "json-server 6", "author": "typicode" },
-    { "id": "7", "title": "json-server 7", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server 1",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server 2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server 3",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server 4",
+      "author": "typicode"
+    },
+    {
+      "id": "5",
+      "title": "json-server 5",
+      "author": "typicode"
+    },
+    {
+      "id": "6",
+      "title": "json-server 6",
+      "author": "typicode"
+    },
+    {
+      "id": "7",
+      "title": "json-server 7",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": "1", "body": "some comment", "postId": "1" }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -19,13 +51,13 @@
     }
   ],
   "profile": {
-    "first": "Andrei",
+    "firstname": "Andrei",
     "lastname": "Ivanov",
     "age": 29,
     "currency": "EUR",
-    "country": "Hungary",
+    "country": "Russia",
     "city": "Budapest",
     "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    "avatar": "https://a.d-cd.net/dbf5d02s-960.jpg"
   }
 }

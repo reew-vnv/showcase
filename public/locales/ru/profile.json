@@ -3,5 +3,14 @@
   "Profile": "Профиль",
   "Edit": "Редактировать",
   "Firstname": "Имя",
-  "Lastname": "Фамилия"
+  "Lastname": "Фамилия",
+  "Profile Page Error Title": "Произошла ошибка при загрузке профиля",
+  "Profile Page Error Text": "Попробуйте обновить страницу",
+  "Cancel": "Отменить",
+  "Save": "Сохранить",
+  "Age": "Возраст",
+  "City": "Город",
+  "Type link to Avatar": "Введите ссылку на Аватар",
+  "UserName": "Имя Пользователя",
+  "Choose Currency": "Выберети Валюту"
 }
