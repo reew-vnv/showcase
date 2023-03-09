@@ -2,22 +2,26 @@
 @import "variables/global";
 @import "themes/light";
 @import "themes/dark";
+@import "themes/green";
 
-body {
+.app,
+.app_modal {
     font: var(--font-m);
     color: var(--primary-color);
-}
-
-.app {
     background: var(--bg-color);
     min-height: 100vh;
 }
 
 .content-page {
+    background: var(--inverted-bg-color);
     display: flex;
 }
 
 .page-wrapper {
     flex-grow: 1;
     padding: 20px;
+    margin: 0.5rem;
+    background: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    border-radius: 4px;
 }
