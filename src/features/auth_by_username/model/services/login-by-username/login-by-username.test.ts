@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
     loginByUsername,
 } from 'features/auth_by_username/model/services/login-by-username/login-by-username';

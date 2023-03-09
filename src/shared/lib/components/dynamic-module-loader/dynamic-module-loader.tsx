@@ -8,9 +8,6 @@ export type ReducersList = {
     // eslint-disable-next-line no-unused-vars
     [name in StateSchemeKey]?: Reducer
 }
-
-type ReducersListEntry = [StateSchemeKey, Reducer]
-
 interface DynamicModuleLoaderProps {
     reducers: ReducersList,
     removeAfterUnmount?: boolean

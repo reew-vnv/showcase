@@ -1,5 +1,4 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import cls from './text.module.scss';
 
@@ -25,8 +24,6 @@ interface TextProps {
 export const Text = memo(({
     className, title, text, theme = TextTheme.PRIMARY, align = TextAlign.LEFT,
 }: TextProps) => {
-    const { t } = useTranslation();
-
     const mods: Mods = {
         [cls[theme]]: true,
         [cls[align]]: true,

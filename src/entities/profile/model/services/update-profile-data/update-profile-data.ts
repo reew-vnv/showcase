@@ -26,6 +26,7 @@ export const updateProfileData = createAsyncThunk<
 
                 return response.data;
             } catch (e) {
+                // eslint-disable-next-line no-console
                 console.log(e);
                 return thunkAPI.rejectWithValue([ValidateProfileError.SERVER_ERROR]);
             }
