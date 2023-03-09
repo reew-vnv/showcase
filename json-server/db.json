@@ -54,8 +54,8 @@
     "firstname": "Andrei",
     "lastname": "Ivanov",
     "age": 29,
-    "currency": "EUR",
-    "country": "Russia",
+    "currency": "USD",
+    "country": "Hungary",
     "city": "Budapest",
     "username": "admin",
     "avatar": "https://a.d-cd.net/dbf5d02s-960.jpg"

@@ -1,13 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import {
-    DynamicModuleLoader, ReducersList,
+    DynamicModuleLoader,
+    ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
 import {
     fetchProfileData,
-    getProfileData, getProfileError, getProfileForm,
-    getProfileIsLoading, getProfileReadonly, profileActions,
+    getProfileError,
+    getProfileForm,
+    getProfileIsLoading,
+    getProfileReadonly,
+    getProfileValidateErrors,
+    profileActions,
     ProfileCard,
-    profileReducer,
+    profileReducer, ValidateProfileError,
 } from 'entities/profile';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useCallback, useEffect } from 'react';
@@ -15,6 +20,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/currency';
 import { Country } from 'entities/country';
+import { Text, TextTheme } from 'shared/ui/text/text';
 import { ProfileHeader } from './profile-header/profile-header';
 
 const reducers: ReducersList = {
@@ -33,6 +39,16 @@ const Profile = ({ className }: ProfileProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
+    const validateErrors = useSelector(getProfileValidateErrors);
+
+    const validateErrorTranslates = {
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('Incorrect User Data'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Incorrect Age'),
+        [ValidateProfileError.INCORRECT_COUNTRY]: t('Incorrect Country'),
+        [ValidateProfileError.INCORRECT_CURRENCY]: t('Incorrect Currency'),
+        [ValidateProfileError.NO_DATA]: t('No Data'),
+        [ValidateProfileError.SERVER_ERROR]: t('Server Error'),
+    };
 
     useEffect(() => {
         dispatch(fetchProfileData());
@@ -74,6 +90,13 @@ const Profile = ({ className }: ProfileProps) => {
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames('', {}, [className])}>
                 <ProfileHeader />
+                {validateErrors?.length && validateErrors.map((error) => (
+                    <Text
+                        key={error}
+                        theme={TextTheme.ERROR}
+                        text={validateErrorTranslates[error]}
+                    />
+                )) }
                 <ProfileCard
                     data={form}
                     isLoading={isLoading}

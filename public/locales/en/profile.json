@@ -12,5 +12,11 @@
   "City": "City",
   "Type link to Avatar": "Type link to Avatar",
   "UserName": "User Name",
-  "Choose Currency": "Choose Currency"
+  "Choose Currency": "Choose Currency",
+  "Incorrect User Data": "Incorrect User Data",
+  "Incorrect Age": "Incorrect Age",
+  "Incorrect Country": "Incorrect Country",
+  "Incorrect Currency": "Incorrect Currency",
+  "No Data": "No Data",
+  "Server Error": "Server Error"
 }

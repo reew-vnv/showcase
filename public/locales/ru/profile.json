@@ -12,5 +12,11 @@
   "City": "Город",
   "Type link to Avatar": "Введите ссылку на Аватар",
   "UserName": "Имя Пользователя",
-  "Choose Currency": "Выберети Валюту"
+  "Choose Currency": "Выберети Валюту",
+  "Incorrect User Data": "Некорректная Пользовательская Информация",
+  "Incorrect Age": "Возраст указан неверно",
+  "Incorrect Country": "Страна указана неверно",
+  "Incorrect Currency": "Валюта указана неверно",
+  "No Data": "Нет Данных",
+  "Server Error": "Серверная Ошибка"
 }
