@@ -1,9 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Article } from 'entities/article';
-import { ArticleBlockType, ArticleType } from 'entities/article/model/types/article';
 import { StoreDecorator } from 'shared/config/storybook/store-decorator/store-decorator';
-import ArticleDetails from './article-details';
+import { Article, ArticleBlockType, ArticleType } from 'entities/article/model/types/article';
+import { ArticleDetailsComponent } from './article-details-component';
 
 const article: Article = {
     id: '1',
@@ -74,19 +73,37 @@ const article: Article = {
 };
 
 export default {
-    title: 'pages/article-details',
-    component: ArticleDetails,
+    title: 'entities/article-details-component',
+    component: ArticleDetailsComponent,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleDetails>;
+} as ComponentMeta<typeof ArticleDetailsComponent>;
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
+const Template: ComponentStory<
+    typeof ArticleDetailsComponent
+    > = (args) => <ArticleDetailsComponent {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [StoreDecorator({
     articleDetails: {
         data: article,
+    },
+})];
+
+export const IsLoading = Template.bind({});
+IsLoading.args = {};
+IsLoading.decorators = [StoreDecorator({
+    articleDetails: {
+        isLoading: true,
+    },
+})];
+
+export const Error = Template.bind({});
+Error.args = {};
+Error.decorators = [StoreDecorator({
+    articleDetails: {
+        error: 'error',
     },
 })];

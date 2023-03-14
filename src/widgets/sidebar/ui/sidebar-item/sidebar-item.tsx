@@ -5,6 +5,7 @@ import { SidebarItemType } from 'widgets/sidebar/model/items';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from 'entities/user';
+import { ColorsEnum, Icon } from 'shared/ui/icon/icon';
 import cls from './sidebar-item.module.scss';
 
 interface SidebarItemProps {
@@ -23,7 +24,7 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
             to={item.path}
             className={classNames(cls.item, { [cls.collapsed]: collapsed })}
         >
-            <item.Icon className={cls.icon} />
+            <Icon Svg={item.Icon} fill={ColorsEnum.SECONDARY} />
             <span className={cls.link}>{t(item.text)}</span>
         </AppLink>
     );

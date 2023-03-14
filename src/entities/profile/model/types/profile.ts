@@ -11,14 +11,14 @@ export enum ValidateProfileError {
 }
 
 export interface Profile {
-    'firstname'?: string,
-    'lastname'?: string,
-    'age'?: number,
-    'currency'?: Currency,
-    'country'?: Country,
-    'city'?: string,
-    'username'?: string,
-    'avatar'?: string
+    firstname?: string,
+    lastname?: string,
+    age?: number,
+    currency?: Currency,
+    country?: Country,
+    city?: string,
+    username?: string,
+    avatar?: string
 }
 
 export interface ProfileScheme {

@@ -3,7 +3,7 @@ import { Theme, useTheme } from 'app/providers/theme-provider';
 import ThemeIcon from 'shared/assets/icons/theme-light-dark.svg';
 import { Button, ButtonTheme } from 'shared/ui/button/button';
 import { memo } from 'react';
-import cls from './theme-switcher.module.scss';
+import { ColorsEnum, Icon } from 'shared/ui/icon/icon';
 
 interface ThemeSwitcherProps {
     className?: string,
@@ -19,8 +19,8 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
             onClick={toggleTheme}
         >
             {theme === Theme.DARK
-                ? <ThemeIcon className={cls.switcher_icon} />
-                : <ThemeIcon className={cls.switcher_icon} />}
+                ? <Icon Svg={ThemeIcon} size="36px" fill={ColorsEnum.SECONDARY} />
+                : <Icon Svg={ThemeIcon} size="36px" fill={ColorsEnum.SECONDARY} />}
         </Button>
     );
 });
