@@ -5,7 +5,7 @@ import {
     ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
 import { articleDetailsReducer } from 'entities/article/model/slice/article-details-slice';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import {
     fetchArticleById,
@@ -28,6 +28,7 @@ import {
     ImageBlockComponent,
 } from 'entities/article/ui/image-block-component/image-block-component';
 import { TextBlockComponent } from 'entities/article/ui/text-block-component/text-block-component';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import cls from './article-details-component.module.scss';
 
 const reducers: ReducersList = {
@@ -60,11 +61,11 @@ export const ArticleDetailsComponent = memo((props: ArticleDetailsProps) => {
         }
     }, []);
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
+    useInitialEffect(() => {
+        if (id != null) {
             dispatch(fetchArticleById(id));
         }
-    }, [dispatch, id]);
+    });
 
     let content;
 

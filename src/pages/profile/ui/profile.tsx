@@ -15,12 +15,13 @@ import {
     profileReducer, ValidateProfileError,
 } from 'entities/profile';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/currency';
 import { Country } from 'entities/country';
 import { Text, TextTheme } from 'shared/ui/text/text';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { ProfileHeader } from './profile-header/profile-header';
 
 const reducers: ReducersList = {
@@ -50,11 +51,9 @@ const Profile = ({ className }: ProfileProps) => {
         [ValidateProfileError.SERVER_ERROR]: t('Server Error'),
     };
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
-        }
-    }, [dispatch]);
+    useInitialEffect(() => {
+        dispatch(fetchProfileData());
+    });
 
     const onChangeFirstName = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ firstname: value || '' }));
