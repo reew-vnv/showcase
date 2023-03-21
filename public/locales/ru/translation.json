@@ -16,5 +16,7 @@
   "Wrong Credentials": "Неверный логин или пароль",
   "Sign Out": "Выйти",
   "Choose Currency": "Укажите Валюту",
-  "Choose Country": "Укажите Страну"
+  "Choose Country": "Укажите Страну",
+  "Send": "Отправить",
+  "Type comment": "Введите комментарий"
 }

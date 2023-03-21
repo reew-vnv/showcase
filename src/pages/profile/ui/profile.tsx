@@ -22,6 +22,7 @@ import { Currency } from 'entities/currency';
 import { Country } from 'entities/country';
 import { Text, TextTheme } from 'shared/ui/text/text';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
+import { useParams } from 'react-router-dom';
 import { ProfileHeader } from './profile-header/profile-header';
 
 const reducers: ReducersList = {
@@ -41,6 +42,7 @@ const Profile = ({ className }: ProfileProps) => {
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors);
+    const { id } = useParams<{id: string}>();
 
     const validateErrorTranslates = {
         [ValidateProfileError.INCORRECT_USER_DATA]: t('Incorrect User Data'),
@@ -52,7 +54,9 @@ const Profile = ({ className }: ProfileProps) => {
     };
 
     useInitialEffect(() => {
-        dispatch(fetchProfileData());
+        if (id) {
+            dispatch(fetchProfileData(id));
+        }
     });
 
     const onChangeFirstName = useCallback((value?: string) => {

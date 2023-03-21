@@ -57,6 +57,24 @@
       "postId": "1",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "some comment",
+      "id": "rVM1ntr"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "some ne comment ",
+      "id": "XJC4YQP"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "dgdfgdfgsd",
+      "id": "NDSo47G"
     }
   ],
   "users": [
@@ -65,7 +83,7 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://a.d-cd.net/dbf5d02s-960.jpg"
+      "avatar": "https://static.vecteezy.com/system/resources/previews/002/410/747/original/cute-siamese-cat-on-yellow-background-free-photo.jpg"
     },
     {
       "id": "2",
@@ -75,16 +93,30 @@
       "avatar": "https://a.d-cd.net/dbf5d02s-960.jpg"
     }
   ],
-  "profile": {
-    "firstname": "Andreika",
-    "lastname": "Ivanov",
-    "age": 29,
-    "currency": "USD",
-    "country": "Hungary",
-    "city": "Budapest",
-    "username": "admin",
-    "avatar": "https://a.d-cd.net/dbf5d02s-960.jpg"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Andrei",
+      "lastname": "Ivanov",
+      "age": 29,
+      "currency": "USD",
+      "country": "Hungary",
+      "city": "Budapest",
+      "username": "admin",
+      "avatar": "https://static.vecteezy.com/system/resources/previews/002/410/747/original/cute-siamese-cat-on-yellow-background-free-photo.jpg"
+    },
+    {
+      "id": "2",
+      "firstname": "Andreika",
+      "lastname": "Ivanov",
+      "age": 29,
+      "currency": "USD",
+      "country": "Hungary",
+      "city": "Budapest",
+      "username": "user",
+      "avatar": "https://www.clipartmax.com/png/middle/123-1236782_these-are-some-cats-avatar-i-drew-during-my-free-time-portrait.png"
+    }
+  ],
   "articles": [
     {
       "id": "1",
@@ -93,7 +125,9 @@
       "img": "https://img.freepik.com/free-icon/file-formats_318-338069.jpg",
       "views": 1488,
       "createdAt": "11.09.2023",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
