@@ -4,6 +4,7 @@
   "Article Details Page Error Title": "Article Details Page Error Title",
   "Article Not Found": "Article Not Found",
   "Authorization Form": "Authorization Form",
+  "Back to Articles": "Back to Articles",
   "Cancel": "Cancel",
   "Choose Country": "Choose Country",
   "Choose Currency": "Choose Currency",
@@ -27,6 +28,13 @@
   "Profile": "Profile",
   "Profile Page Error Text": "Profile Page Error Text",
   "Profile Page Error Title": "Profile Page Error Title",
+  "Read full article": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Save": "Save",
   "Send": "Send",
   "Server Error": "Server Error",

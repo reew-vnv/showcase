@@ -20,7 +20,7 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
     if (item.authOnly && !isAuth) return null;
     return (
         <AppLink
-            theme={AppLinkTheme.SECONDARY}
+            theme={AppLinkTheme.PRIMARY}
             to={item.path}
             className={classNames(cls.item, { [cls.collapsed]: collapsed })}
         >

@@ -43,6 +43,7 @@ module.exports = {
         'react/jsx-props-no-spreading': ['off'],
         'no-undef': ['off'],
         'no-unused-vars': ['off'],
+        'react/no-array-index-key': ['off'],
         '@typescript-eslint/no-unused-vars': [
             'error',
             { argsIgnorePattern: '^_' },
