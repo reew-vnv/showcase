@@ -1,0 +1,18 @@
+.article_view_selector {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.view_button {
+    padding: 10px 8px;
+}
+
+.selected {
+    fill: var(--secondary-color);
+    cursor: auto;
+}
+
+.selected:hover {
+    opacity: 1;
+}
