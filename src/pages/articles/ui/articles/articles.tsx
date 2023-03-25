@@ -13,7 +13,6 @@ import {
 } from 'pages/articles/model/slices/articles-slice';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { fetchArticlesList } from 'pages/articles/model/services/fetch-articles-list';
 import { useSelector } from 'react-redux';
 import {
     getArticlesIsLoading,
@@ -21,6 +20,7 @@ import {
 } from 'pages/articles/model/selectors/articles-selectors';
 import { Page } from 'shared/ui/page/page';
 import { fetchNextArticles } from 'pages/articles/model/services/fetch-next-articles';
+import { initArticles } from 'pages/articles/model/services/init-articles';
 import cls from './articles.module.scss';
 
 interface ArticlesProps {
@@ -46,14 +46,11 @@ const Articles = ({ className }: ArticlesProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesActions.initialState());
-        dispatch(fetchArticlesList({
-            page: 1,
-        }));
+        dispatch(initArticles());
     });
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers}>
             <Page
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.articles, {}, [className])}
