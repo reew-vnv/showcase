@@ -1,3 +1,4 @@
+import React from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from 'shared/ui/text/text';
@@ -17,14 +18,10 @@ interface ProfileCardProps {
     error?: string,
     isLoading?: boolean,
     readonly?: boolean
-    onChangeLastName?: (value?: string) => void,
-    onChangeFirstName?: (value?: string) => void,
-    onChangeAge?: (value?: string) => void,
-    onChangeCity?: (value?: string) => void,
-    onChangeUserName?: (value?: string) => void,
-    onChangeAvatar?: (value?: string) => void,
     onChangeCurrency?: (value?: Currency) => void,
-    onChangeCountry?: (value?: Country) => void
+    onChangeCountry?: (value?: Country) => void,
+    handleChange: (name?: any, value?: string) => void,
+    setCurrentField: (field: string) => void
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -34,14 +31,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
         isLoading,
         error,
         readonly,
-        onChangeLastName,
-        onChangeFirstName,
-        onChangeCity,
-        onChangeAge,
-        onChangeUserName,
-        onChangeAvatar,
         onChangeCountry,
         onChangeCurrency,
+        handleChange,
+        setCurrentField,
     } = props;
     const { t } = useTranslation('profile');
 
@@ -82,43 +75,49 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     value={data?.firstname}
                     placeholder={t('Firstname')}
                     className={cls.input}
-                    onChange={onChangeFirstName}
+                    onChange={handleChange}
                     readonly={readonly}
+                    onSelect={() => setCurrentField('firstname')}
                 />
                 <Input
                     value={data?.lastname}
                     placeholder={t('Lastname')}
                     className={cls.input}
-                    onChange={onChangeLastName}
+                    onChange={handleChange}
                     readonly={readonly}
+                    onSelect={() => setCurrentField('lastname')}
                 />
                 <Input
                     value={data?.age}
                     placeholder={t('Age')}
                     className={cls.input}
-                    onChange={onChangeAge}
+                    onChange={handleChange}
                     readonly={readonly}
+                    onSelect={() => setCurrentField('age')}
                 />
                 <Input
                     value={data?.city}
                     placeholder={t('City')}
                     className={cls.input}
-                    onChange={onChangeCity}
+                    onChange={handleChange}
                     readonly={readonly}
+                    onSelect={() => setCurrentField('city')}
                 />
                 <Input
                     value={data?.username}
                     placeholder={t('UserName')}
                     className={cls.input}
-                    onChange={onChangeUserName}
+                    onChange={handleChange}
                     readonly={readonly}
+                    onSelect={() => setCurrentField('username')}
                 />
                 <Input
                     value={data?.avatar}
                     placeholder={t('Type link to Avatar')}
                     className={cls.input}
-                    onChange={onChangeAvatar}
+                    onChange={handleChange}
                     readonly={readonly}
+                    onSelect={() => setCurrentField('avatar')}
                 />
                 <CurrencySelect
                     value={data?.currency}

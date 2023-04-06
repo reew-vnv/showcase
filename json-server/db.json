@@ -115,22 +115,22 @@
     {
       "id": "1",
       "firstname": "Andrei",
-      "lastname": "Ivanov",
+      "lastname": "Ivanov AAA",
       "age": 29,
       "currency": "USD",
       "country": "Hungary",
-      "city": "Budapest",
+      "city": "Budapest City",
       "username": "admin",
       "avatar": "https://static.vecteezy.com/system/resources/previews/002/410/747/original/cute-siamese-cat-on-yellow-background-free-photo.jpg"
     },
     {
       "id": "2",
-      "firstname": "Andreika",
-      "lastname": "Ivanov",
+      "firstname": "Andrei Valerievich",
+      "lastname": "Petrov",
       "age": 29,
       "currency": "USD",
       "country": "Hungary",
-      "city": "Budapest",
+      "city": "Budapest City",
       "username": "user",
       "avatar": "https://www.clipartmax.com/png/middle/123-1236782_these-are-some-cats-avatar-i-drew-during-my-free-time-portrait.png"
     }

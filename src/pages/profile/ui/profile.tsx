@@ -15,7 +15,7 @@ import {
     profileReducer, ValidateProfileError,
 } from 'entities/profile';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/currency';
@@ -45,6 +45,8 @@ const Profile = ({ className }: ProfileProps) => {
     const validateErrors = useSelector(getProfileValidateErrors);
     const { id } = useParams<{id: string}>();
 
+    const [currentField, setCurrentField] = useState('');
+
     const validateErrorTranslates = {
         [ValidateProfileError.INCORRECT_USER_DATA]: t('Incorrect User Data'),
         [ValidateProfileError.INCORRECT_AGE]: t('Incorrect Age'),
@@ -60,30 +62,6 @@ const Profile = ({ className }: ProfileProps) => {
         }
     });
 
-    const onChangeFirstName = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ firstname: value || '' }));
-    }, [dispatch]);
-
-    const onChangeLastName = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ lastname: value || '' }));
-    }, [dispatch]);
-
-    const onChangeAge = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ age: Number(value || 0) }));
-    }, [dispatch]);
-
-    const onChangeCity = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ city: value || '' }));
-    }, [dispatch]);
-
-    const onChangeUserName = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ username: value || '' }));
-    }, [dispatch]);
-
-    const onChangeAvatar = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ avatar: value || '' }));
-    }, [dispatch]);
-
     const onChangeCurrency = useCallback((currency?: Currency) => {
         dispatch(profileActions.updateProfile({ currency }));
     }, [dispatch]);
@@ -91,6 +69,12 @@ const Profile = ({ className }: ProfileProps) => {
     const onChangeCountry = useCallback((country?: Country) => {
         dispatch(profileActions.updateProfile({ country }));
     }, [dispatch]);
+
+    const handleChange = useCallback((value?: string) => {
+        dispatch(profileActions.updateProfile({
+            [currentField]: currentField !== 'age' ? value : Number(value || 0),
+        }));
+    }, [currentField, dispatch]);
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -108,14 +92,10 @@ const Profile = ({ className }: ProfileProps) => {
                     isLoading={isLoading}
                     error={error}
                     readonly={readonly}
-                    onChangeFirstName={onChangeFirstName}
-                    onChangeLastName={onChangeLastName}
-                    onChangeAge={onChangeAge}
-                    onChangeCity={onChangeCity}
-                    onChangeAvatar={onChangeAvatar}
-                    onChangeUserName={onChangeUserName}
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
+                    handleChange={handleChange}
+                    setCurrentField={setCurrentField}
                 />
             </Page>
         </DynamicModuleLoader>

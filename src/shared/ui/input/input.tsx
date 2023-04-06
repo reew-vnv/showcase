@@ -1,6 +1,6 @@
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
-    InputHTMLAttributes, memo, useEffect, useRef, useState,
+    InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './input.module.scss';
 
@@ -28,26 +28,16 @@ export const Input = memo((props: InputProps) => {
     } = props;
 
     const ref = useRef<HTMLInputElement>(null);
-    const [isFocused, setIsFocused] = useState<boolean>(false);
-    const [caretPosition, setCaretPosition] = useState<number>(0);
-
-    const isCaretVisible = isFocused && !readonly;
 
     useEffect(() => {
         if (autofocus) {
-            setIsFocused(true);
             ref.current?.focus();
         }
     }, [autofocus]);
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
-        setCaretPosition(e.target.value.length);
     };
-
-    const onBlur = () => setIsFocused(false);
-    const onFocus = () => setIsFocused(true);
-    const onSelect = (e: any) => setCaretPosition(e?.target.selectionStart || 0);
 
     const mods: Mods = {
         [cls.readonly]: readonly,
@@ -60,25 +50,16 @@ export const Input = memo((props: InputProps) => {
                     {`${placeholder} :`}
                 </div>
             )}
-            <div className={cls.caret_wrapper}>
+            <div className={cls.input_content}>
                 <input
                     ref={ref}
                     type={type}
                     value={value}
                     onChange={onChangeHandler}
                     className={cls.input}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onSelect={onSelect}
                     readOnly={readonly}
                     {...otherProps}
                 />
-                {isCaretVisible && (
-                    <span
-                        className={cls.caret}
-                        style={{ left: `${caretPosition * 7}px` }}
-                    />
-                )}
             </div>
         </div>
     );
