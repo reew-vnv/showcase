@@ -26,7 +26,7 @@ import {
 } from 'pages/article-details/model/services/add-comment-for-article/add-comment-for-article';
 import { Button, ButtonTheme } from 'shared/ui/button/button';
 import { RoutePath } from 'shared/config/route-config/route-config';
-import { Page } from 'shared/ui/page/page';
+import { Page } from 'widgets/page/page';
 import cls from './article-details.module.scss';
 
 interface ArticleDetailsProps {

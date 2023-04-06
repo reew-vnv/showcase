@@ -18,7 +18,7 @@ import {
     getArticlesIsLoading,
     getArticlesView,
 } from 'pages/articles/model/selectors/articles-selectors';
-import { Page } from 'shared/ui/page/page';
+import { Page } from 'widgets/page/page';
 import { fetchNextArticles } from 'pages/articles/model/services/fetch-next-articles';
 import { initArticles } from 'pages/articles/model/services/init-articles';
 import cls from './articles.module.scss';

@@ -14,10 +14,12 @@ import { ArticleDetailsScheme } from 'entities/article';
 import { ArticleDetailsCommentScheme } from 'pages/article-details';
 import { AddCommentFormScheme } from 'features/add-comment-form';
 import { ArticlesScheme } from 'pages/articles';
+import { ScrollSaveScheme } from 'features/scroll-save';
 
 export interface StateScheme {
     counter: CounterScheme
     user: UserScheme,
+    scrollSave: ScrollSaveScheme,
 
     // Async reducers
     loginForm?: LoginScheme

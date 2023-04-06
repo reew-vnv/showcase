@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Page } from './page';
 
 export default {
-    title: '*/page',
+    title: 'widgets/page',
     component: Page,
     argTypes: {
         backgroundColor: { control: 'color' },
