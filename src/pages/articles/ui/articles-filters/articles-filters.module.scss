@@ -1,0 +1,15 @@
+.sort_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search {
+    margin-top: 16px;
+    color: var(--card-color);
+}
+
+.input {
+    color: var(--inverted-primary-color);
+    text-shadow: 0 0 0 var(--card-color);
+}

@@ -8,6 +8,7 @@ type InputHTMLProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onC
 
 interface InputProps extends InputHTMLProps {
     className?: string,
+    inputClassName?: string,
     value?: string | number,
     onChange?: (value: string) => void,
     placeholder?: string,
@@ -18,6 +19,7 @@ interface InputProps extends InputHTMLProps {
 export const Input = memo((props: InputProps) => {
     const {
         className,
+        inputClassName,
         value,
         onChange,
         type = 'text',
@@ -56,7 +58,7 @@ export const Input = memo((props: InputProps) => {
                     type={type}
                     value={value}
                     onChange={onChangeHandler}
-                    className={cls.input}
+                    className={classNames(cls.input, mods, [inputClassName])}
                     readOnly={readonly}
                     {...otherProps}
                 />

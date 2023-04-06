@@ -93,6 +93,12 @@
       "userId": "2",
       "text": "I love you, Andrew <3",
       "id": "-JsE7xB"
+    },
+    {
+      "articleId": "13",
+      "userId": "1",
+      "text": "sfsdfafasdf",
+      "id": "5ujmQHp"
     }
   ],
   "users": [
@@ -119,9 +125,9 @@
       "age": 29,
       "currency": "USD",
       "country": "Hungary",
-      "city": "Budapest City",
+      "city": "London Amerika",
       "username": "admin",
-      "avatar": "https://static.vecteezy.com/system/resources/previews/002/410/747/original/cute-siamese-cat-on-yellow-background-free-photo.jpg"
+      "avatar": "https://www.pcgames.de/screenshots/1000x562/2022/10/800px-Sasha_Grey_2010-pc-games1.jpg"
     },
     {
       "id": "2",

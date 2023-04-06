@@ -5,6 +5,7 @@
   "Article Not Found": "Article Not Found",
   "Authorization Form": "Authorization Form",
   "Back to Articles": "Back to Articles",
+  "By": "By",
   "Cancel": "Cancel",
   "Choose Country": "Choose Country",
   "Choose Currency": "Choose Currency",
@@ -36,16 +37,23 @@
     }
   },
   "Save": "Save",
+  "Search": "Search",
   "Send": "Send",
   "Server Error": "Server Error",
   "Sign In": "Sign In",
   "Sign Out": "Sign Out",
   "Sign in": "Sign in",
+  "Sort by": "Sort by",
   "Type Password": "Type Password",
   "Type Username": "Type Username",
   "Type comment": "Type comment",
   "Type link to Avatar": "Type link to Avatar",
   "Update Page": "Update Page",
   "UserName": "UserName",
-  "Wrong Credentials": "Wrong Credentials"
+  "Wrong Credentials": "Wrong Credentials",
+  "ascending": "ascending",
+  "creation date": "creation date",
+  "descending": "descending",
+  "title": "title",
+  "views": "views"
 }
