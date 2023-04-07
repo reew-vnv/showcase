@@ -20,6 +20,7 @@ import { Page } from 'widgets/page/page';
 import { fetchNextArticles } from 'pages/articles/model/services/fetch-next-articles';
 import { initArticles } from 'pages/articles/model/services/init-articles';
 import { ArticlesFilters } from 'pages/articles/ui/articles-filters/articles-filters';
+import { useSearchParams } from 'react-router-dom';
 import cls from './articles.module.scss';
 
 interface ArticlesProps {
@@ -35,13 +36,14 @@ const Articles = ({ className }: ArticlesProps) => {
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesIsLoading);
     const view = useSelector(getArticlesView);
+    const [searchParams] = useSearchParams();
 
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticles());
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(initArticles());
+        dispatch(initArticles(searchParams));
     });
 
     return (

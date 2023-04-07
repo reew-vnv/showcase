@@ -26,5 +26,10 @@
   "descending": "descending",
   "creation date": "creation date",
   "title": "title",
-  "views": "views"
+  "views": "views",
+  "All": "All",
+  "IT": "IT",
+  "Science": "Science",
+  "Economics": "Economics",
+  "Articles not found": "Articles not found"
 }

@@ -192,7 +192,7 @@
       "createdAt": "11.10.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -397,7 +397,7 @@
       "createdAt": "05.09.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -479,7 +479,7 @@
       "createdAt": "11.10.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -602,7 +602,7 @@
       "createdAt": "11.09.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -684,7 +684,7 @@
       "createdAt": "05.09.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -766,7 +766,7 @@
       "createdAt": "11.10.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "ECONOMICS"
       ],
       "blocks": [
         {
@@ -971,7 +971,7 @@
       "createdAt": "05.09.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "ECONOMICS"
       ],
       "blocks": [
         {
@@ -1053,7 +1053,7 @@
       "createdAt": "11.10.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -1135,7 +1135,7 @@
       "createdAt": "17.04.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -1217,7 +1217,7 @@
       "createdAt": "15.09.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -1299,7 +1299,7 @@
       "createdAt": "11.09.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -1381,7 +1381,7 @@
       "createdAt": "01.01.2020",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "SCIENCE", "ECONOMICS"
       ],
       "blocks": [
         {
@@ -1463,7 +1463,7 @@
       "createdAt": "11.09.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "SCIENCE", "ECONOMICS"
       ],
       "blocks": [
         {
@@ -1545,7 +1545,7 @@
       "createdAt": "05.09.2019",
       "userId": "1",
       "type": [
-        "IT"
+        "IT", "SCIENCE", "ECONOMICS"
       ],
       "blocks": [
         {

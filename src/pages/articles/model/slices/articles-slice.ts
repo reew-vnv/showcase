@@ -4,7 +4,7 @@ import { Article, ArticleView } from 'entities/article';
 import { ArticlesScheme } from 'pages/articles';
 import { fetchArticlesList } from 'pages/articles/model/services/fetch-articles-list';
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
-import { ArticleSortField } from 'entities/article/model/types/article';
+import { ArticleSortField, ArticleType } from 'entities/article/model/types/article';
 import { SortOrder } from 'shared/types';
 
 const articlesAdapter = createEntityAdapter<Article>({
@@ -30,6 +30,7 @@ const articlesSlice = createSlice({
         sort: ArticleSortField.CREATED,
         search: '',
         order: 'asc',
+        type: ArticleType.ALL,
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
@@ -47,6 +48,9 @@ const articlesSlice = createSlice({
         },
         setSearch: (state, action: PayloadAction<string>) => {
             state.search = action.payload;
+        },
+        setType: (state, action: PayloadAction<ArticleType>) => {
+            state.type = action.payload;
         },
         initialState: (state) => {
             const view = localStorage.getItem(ARTICLE_VIEW_LOCALSTORAGE_KEY) as ArticleView;
