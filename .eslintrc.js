@@ -48,6 +48,7 @@ module.exports = {
             'error',
             { argsIgnorePattern: '^_' },
         ],
+        'max-len': ['error', { ignoreComments: true, code: 125 }],
     },
     globals: {
         __IS_DEV__: true,

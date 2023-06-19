@@ -1,16 +1,16 @@
-import { FC, useEffect } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
-import { ReduxStoreWithManager } from 'app/providers/store-provider';
+import { ReduxStoreWithManager, StateScheme } from 'app/providers/store-provider';
 import { StateSchemeKey } from 'app/providers/store-provider/config/state-scheme';
 import { Reducer } from '@reduxjs/toolkit';
 
 export type ReducersList = {
-    // eslint-disable-next-line no-unused-vars
-    [name in StateSchemeKey]?: Reducer
+    [name in StateSchemeKey]?: Reducer<NonNullable<StateScheme[name]>>
 }
 interface DynamicModuleLoaderProps {
     reducers: ReducersList,
-    removeAfterUnmount?: boolean
+    removeAfterUnmount?: boolean,
+    children: ReactNode
 }
 
 export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {

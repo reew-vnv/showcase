@@ -99,6 +99,36 @@
       "userId": "1",
       "text": "sfsdfafasdf",
       "id": "5ujmQHp"
+    },
+    {
+      "articleId": "9",
+      "userId": "11968dce-0ea8-47c5-9ed0-45b913e62c09",
+      "text": "comm",
+      "id": "5V6TXmF"
+    },
+    {
+      "articleId": "7",
+      "userId": "11968dce-0ea8-47c5-9ed0-45b913e62c09",
+      "text": "add new comment",
+      "id": "PJnttId"
+    },
+    {
+      "articleId": "1",
+      "userId": "11968dce-0ea8-47c5-9ed0-45b913e62c09",
+      "text": "new one",
+      "id": "KSn9q_C"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "new test",
+      "id": "s5lnHiw"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "test another one",
+      "id": "0Ckr4Jy"
     }
   ],
   "users": [
@@ -766,7 +796,8 @@
       "createdAt": "11.10.2022",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -971,7 +1002,8 @@
       "createdAt": "05.09.2019",
       "userId": "1",
       "type": [
-        "IT", "ECONOMICS"
+        "IT",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -1381,7 +1413,9 @@
       "createdAt": "01.01.2020",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE", "ECONOMICS"
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -1463,7 +1497,9 @@
       "createdAt": "11.09.2023",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE", "ECONOMICS"
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -1545,7 +1581,9 @@
       "createdAt": "05.09.2019",
       "userId": "1",
       "type": [
-        "IT", "SCIENCE", "ECONOMICS"
+        "IT",
+        "SCIENCE",
+        "ECONOMICS"
       ],
       "blocks": [
         {
