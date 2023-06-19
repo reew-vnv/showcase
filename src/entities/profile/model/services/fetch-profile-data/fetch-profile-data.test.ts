@@ -1,7 +1,7 @@
 import { TestAsyncThunk } from 'shared/lib/tests/test-async-thunk/test-async-thunk';
-import { fetchProfileData } from 'entities/profile';
 import { Country } from 'entities/country';
 import { Currency } from 'entities/currency';
+import { fetchProfileData } from '../fetch-profile-data/fetch-profile-data';
 
 jest.mock('axios');
 

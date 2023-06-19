@@ -1,10 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { ArticleView } from 'entities/article';
 import { Icon } from 'shared/ui/icon/icon';
 import ViewListIcon from 'shared/assets/icons/view-list.svg';
 import ViewGridIcon from 'shared/assets/icons/view-grid.svg';
 import { Button, ButtonTheme } from 'shared/ui/button/button';
+import { ArticleView } from '../../model/types/article';
 import cls from './article-view-selector.module.scss';
 
 interface ArticleViewSelectorProps {

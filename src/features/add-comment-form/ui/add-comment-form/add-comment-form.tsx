@@ -7,13 +7,13 @@ import {
     DynamicModuleLoader, ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
 import { useSelector } from 'react-redux';
-import {
-    getAddCommentFormText,
-} from 'features/add-comment-form/model/selectors/add-comment-form-selectors';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import {
+    getAddCommentFormText,
+} from '../../model/selectors/add-comment-form-selectors';
+import {
     addCommentFormActions, addCommentFormReducer,
-} from 'features/add-comment-form/model/slices/add-comment-form-slice';
+} from '../../model/slices/add-comment-form-slice';
 import cls from './add-comment-form.module.scss';
 
 export interface AddCommentFormProps {

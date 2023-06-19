@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { ArticleTextBlock } from 'entities/article/model/types/article';
 import { Text } from 'shared/ui/text/text';
+import { ArticleTextBlock } from '../../model/types/article';
 import cls from './text-block-component.module.scss';
 
 interface TextBlockComponentProps {

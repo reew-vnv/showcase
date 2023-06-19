@@ -1,11 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { CommentInterface } from 'entities/comment/model/types/comment';
 import { Avatar } from 'shared/ui/avatar/avatar';
 import { Text } from 'shared/ui/text/text';
 import { Skeleton } from 'shared/ui/skeleton/skeleton';
 import { AppLink } from 'shared/ui/app-link/app-link';
 import { RoutePath } from 'shared/config/route-config/route-config';
+import { CommentInterface } from '../../model/types/comment';
 import cls from './comment-card.module.scss';
 
 interface CommentCardProps {

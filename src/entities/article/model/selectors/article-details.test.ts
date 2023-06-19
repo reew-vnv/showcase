@@ -2,7 +2,7 @@ import { StateScheme } from 'app/providers/store-provider';
 import {
     getArticleDetailsData, getArticleDetailsError,
     getArticleDetailsIsLoading,
-} from 'entities/article/model/selectors/article-details';
+} from '../../model/selectors/article-details';
 
 describe('article-details.test', () => {
     test('should return data', () => {

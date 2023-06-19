@@ -4,12 +4,12 @@ import { Button, ButtonTheme } from 'shared/ui/button/button';
 import { Input } from 'shared/ui/input/input';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
-import { loginActions, loginReducer } from 'features/auth_by_username/model/slice/logic-slice';
 import { TextTheme, Text } from 'shared/ui/text/text';
 import {
     DynamicModuleLoader, ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { loginActions, loginReducer } from '../../model/slice/logic-slice';
 import { getLoginError } from '../../model/selectors/get-login-error/get-login-error';
 import { getLoginIsLoading } from '../../model/selectors/get-login-is-loading/get-login-is-loading';
 import { getLoginUsername } from '../../model/selectors/get-login-username/get-login-username';

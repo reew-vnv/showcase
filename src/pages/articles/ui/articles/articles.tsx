@@ -5,22 +5,22 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
-import {
-    articlesReducer,
-    getArticles,
-} from 'pages/articles/model/slices/articles-slice';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
+import { Page } from 'widgets/page/page';
+import { useSearchParams } from 'react-router-dom';
 import {
     getArticlesIsLoading,
     getArticlesView,
-} from 'pages/articles/model/selectors/articles-selectors';
-import { Page } from 'widgets/page/page';
-import { fetchNextArticles } from 'pages/articles/model/services/fetch-next-articles';
-import { initArticles } from 'pages/articles/model/services/init-articles';
-import { ArticlesFilters } from 'pages/articles/ui/articles-filters/articles-filters';
-import { useSearchParams } from 'react-router-dom';
+} from '../../model/selectors/articles-selectors';
+import { fetchNextArticles } from '../../model/services/fetch-next-articles';
+import { initArticles } from '../../model/services/init-articles';
+import { ArticlesFilters } from '../articles-filters/articles-filters';
+import {
+    articlesReducer,
+    getArticles,
+} from '../../model/slices/articles-slice';
 import cls from './articles.module.scss';
 
 interface ArticlesProps {

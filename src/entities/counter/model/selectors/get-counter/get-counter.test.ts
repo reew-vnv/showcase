@@ -1,5 +1,5 @@
-import { getCounter } from 'entities/counter/model/selectors/get-counter/get-counter';
 import { StateScheme } from 'app/providers/store-provider';
+import { getCounter } from '../../selectors/get-counter/get-counter';
 
 describe('get_counter.test', () => {
     test('should return counter value', () => {

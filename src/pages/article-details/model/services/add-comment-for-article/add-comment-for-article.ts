@@ -2,10 +2,10 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getUserAuthData } from 'entities/user';
 import { ThunkConfig } from 'app/providers/store-provider/config/state-scheme';
 import { CommentInterface } from 'entities/comment';
+import { getArticleDetailsData } from 'entities/article/model/selectors/article-details';
 import {
     fetchCommentsByArticleId,
-} from 'pages/article-details/model/services/fetch-comments-by-article-id/fetch-comments-by-article-id';
-import { getArticleDetailsData } from 'entities/article/model/selectors/article-details';
+} from '../fetch-comments-by-article-id/fetch-comments-by-article-id';
 
 export const addCommentForArticle = createAsyncThunk<
     CommentInterface,

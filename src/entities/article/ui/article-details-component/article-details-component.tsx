@@ -4,31 +4,31 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
-import { articleDetailsReducer } from 'entities/article/model/slice/article-details-slice';
 import { memo, useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import {
-    fetchArticleById,
-} from 'entities/article/model/services/fetch-article-by-id/fetch-article-by-id';
 import { useSelector } from 'react-redux';
-import {
-    getArticleDetailsData,
-    getArticleDetailsError,
-    getArticleDetailsIsLoading,
-} from 'entities/article/model/selectors/article-details';
 import { Text, TextAlign, TextSize } from 'shared/ui/text/text';
 import { Skeleton } from 'shared/ui/skeleton/skeleton';
 import { Avatar } from 'shared/ui/avatar/avatar';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import { ColorsEnum, Icon } from 'shared/ui/icon/icon';
-import { ArticleBlock, ArticleBlockType } from 'entities/article/model/types/article';
-import { CodeBlockComponent } from 'entities/article/ui/code-block-component/code-block-component';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { CodeBlockComponent } from '../code-block-component/code-block-component';
 import {
     ImageBlockComponent,
-} from 'entities/article/ui/image-block-component/image-block-component';
-import { TextBlockComponent } from 'entities/article/ui/text-block-component/text-block-component';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
+} from '../image-block-component/image-block-component';
+import { TextBlockComponent } from '../text-block-component/text-block-component';
+import {
+    getArticleDetailsData,
+    getArticleDetailsError,
+    getArticleDetailsIsLoading,
+} from '../../model/selectors/article-details';
+import {
+    fetchArticleById,
+} from '../../model/services/fetch-article-by-id/fetch-article-by-id';
+import { articleDetailsReducer } from '../../model/slice/article-details-slice';
 import cls from './article-details-component.module.scss';
 
 const reducers: ReducersList = {

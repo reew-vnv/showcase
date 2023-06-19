@@ -3,13 +3,13 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text, TextAlign, TextTheme } from 'shared/ui/text/text';
 import { Input } from 'shared/ui/input/input';
-import { Profile } from 'entities/profile';
 import { Loader } from 'shared/ui/loader/loader';
 import { Avatar } from 'shared/ui/avatar/avatar';
 import { Currency } from 'entities/currency/model/types/currency';
 import { CurrencySelect } from 'entities/currency';
 import { Country } from 'entities/country/model/types/country';
 import { CountrySelect } from 'entities/country';
+import { Profile } from '../../model/types/profile';
 import cls from './profile-card.module.scss';
 
 interface ProfileCardProps {

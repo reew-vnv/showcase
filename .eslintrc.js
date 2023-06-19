@@ -13,7 +13,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'import-check-vnv'],
     rules: {
         indent: ['error', 4],
         'react/jsx-indent': ['error', 4],
@@ -49,6 +49,7 @@ module.exports = {
             { argsIgnorePattern: '^_' },
         ],
         'max-len': ['error', { ignoreComments: true, code: 125 }],
+        'import-check-vnv/path-checker': 'error',
     },
     globals: {
         __IS_DEV__: true,

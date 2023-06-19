@@ -9,34 +9,34 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
-import {
-    getArticleComments,
-} from 'pages/article-details/model/slice/article-details-comments-slice';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
-import {
-    fetchCommentsByArticleId,
-} from 'pages/article-details/model/services/fetch-comments-by-article-id/fetch-comments-by-article-id';
-import { getArticleCommentsIsLoading } from 'pages/article-details/model/selectors/comments';
 import { AddCommentForm } from 'features/add-comment-form';
-import {
-    addCommentForArticle,
-} from 'pages/article-details/model/services/add-comment-for-article/add-comment-for-article';
 import { Page } from 'widgets/page/page';
 import {
+    addCommentForArticle,
+} from '../../model/services/add-comment-for-article/add-comment-for-article';
+import {
     getArticleRecommendations,
-} from 'pages/article-details/model/slice/article-details-recommendations-slice';
+} from '../../model/slice/article-details-recommendations-slice';
 import {
     getArticleRecommendationsIsLoading,
-} from 'pages/article-details/model/selectors/recommendations';
+} from '../../model/selectors/recommendations';
 import {
     fetchArticleRecommendations,
-} from 'pages/article-details/model/services/fetch-article-recommendations/fetch-article-recommendations';
-import { articleDetailsPageReducer } from 'pages/article-details/model/slice';
+} from '../../model/services/fetch-article-recommendations/fetch-article-recommendations';
+import { articleDetailsPageReducer } from '../../model/slice';
 import {
     ArticleDetailsHeader,
-} from 'pages/article-details/ui/article-details-header/article-details-header';
+} from '../article-details-header/article-details-header';
+import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
+import {
+    fetchCommentsByArticleId,
+} from '../../model/services/fetch-comments-by-article-id/fetch-comments-by-article-id';
+import {
+    getArticleComments,
+} from '../../model/slice/article-details-comments-slice';
 import cls from './article-details.module.scss';
 
 interface ArticleDetailsProps {

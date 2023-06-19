@@ -1,7 +1,7 @@
 import { TestAsyncThunk } from 'shared/lib/tests/test-async-thunk/test-async-thunk';
 import {
     fetchArticleById,
-} from 'entities/article/model/services/fetch-article-by-id/fetch-article-by-id';
+} from '../fetch-article-by-id/fetch-article-by-id';
 
 jest.mock('axios');
 
