@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
 import { ArticleDetailsComponent, ArticleList } from 'entities/article';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Text, TextSize } from 'shared/ui/text/text';
 import { CommentList } from 'entities/comment';
 import {
@@ -23,8 +23,6 @@ import { AddCommentForm } from 'features/add-comment-form';
 import {
     addCommentForArticle,
 } from 'pages/article-details/model/services/add-comment-for-article/add-comment-for-article';
-import { Button, ButtonTheme } from 'shared/ui/button/button';
-import { RoutePath } from 'shared/config/route-config/route-config';
 import { Page } from 'widgets/page/page';
 import {
     getArticleRecommendations,
@@ -36,6 +34,9 @@ import {
     fetchArticleRecommendations,
 } from 'pages/article-details/model/services/fetch-article-recommendations/fetch-article-recommendations';
 import { articleDetailsPageReducer } from 'pages/article-details/model/slice';
+import {
+    ArticleDetailsHeader,
+} from 'pages/article-details/ui/article-details-header/article-details-header';
 import cls from './article-details.module.scss';
 
 interface ArticleDetailsProps {
@@ -54,15 +55,10 @@ const ArticleDetails = ({ className }: ArticleDetailsProps) => {
     const recommendations = useSelector(getArticleRecommendations.selectAll);
     const recommendationsIsLoading = useSelector(getArticleRecommendationsIsLoading);
     const isLoading = useSelector(getArticleCommentsIsLoading);
-    const navigate = useNavigate();
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
-
-    const onBackToArticles = useCallback(() => {
-        navigate(RoutePath.articles);
-    }, [navigate]);
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
@@ -80,9 +76,7 @@ const ArticleDetails = ({ className }: ArticleDetailsProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.article_details, {}, [className])}>
-                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToArticles}>
-                    {t('Back to Articles')}
-                </Button>
+                <ArticleDetailsHeader />
                 <ArticleDetailsComponent id={id} />
                 <Text size={TextSize.L} className={cls.recommendations} title={t('Recommendations')} />
                 <ArticleList

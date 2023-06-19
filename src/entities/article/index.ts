@@ -10,3 +10,5 @@ export { ArticleView } from './model/types/article';
 export { ArticleViewSelector } from './ui/article-view-selector/article-view-selector';
 
 export { ArticleTypeTabs } from './ui/article-type-tabs/article-type-tabs';
+
+export { getArticleDetailsData } from './model/selectors/article-details';
