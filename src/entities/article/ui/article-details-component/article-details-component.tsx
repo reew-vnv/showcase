@@ -14,6 +14,7 @@ import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import { ColorsEnum, Icon } from 'shared/ui/icon/icon';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
+import { HStack, VStack } from 'shared/ui/stack';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import { CodeBlockComponent } from '../code-block-component/code-block-component';
 import {
@@ -72,15 +73,19 @@ export const ArticleDetailsComponent = memo((props: ArticleDetailsProps) => {
     if (isLoading) {
         content = (
             <>
-                <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
+                <HStack justify="center" max>
+                    <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
+                </HStack>
                 {/* eslint-disable-next-line i18next/no-literal-string */}
-                <Skeleton className={cls.title} width={300} height={32} border="8px" />
-                {/* eslint-disable-next-line i18next/no-literal-string */}
-                <Skeleton className={cls.skeleton} width={600} height={24} border="8px" />
-                {/* eslint-disable-next-line i18next/no-literal-string */}
-                <Skeleton className={cls.skeleton} width="100%" height={200} border="8px" />
-                {/* eslint-disable-next-line i18next/no-literal-string */}
-                <Skeleton className={cls.skeleton} width="100%" height={200} border="8px" />
+                <VStack gap="4" max>
+                    <Skeleton className={cls.title} width={300} height={32} border="8px" />
+                    {/* eslint-disable-next-line i18next/no-literal-string */}
+                    <Skeleton className={cls.skeleton} width={600} height={24} border="8px" />
+                    {/* eslint-disable-next-line i18next/no-literal-string */}
+                    <Skeleton className={cls.skeleton} width="100%" height={200} border="8px" />
+                    {/* eslint-disable-next-line i18next/no-literal-string */}
+                    <Skeleton className={cls.skeleton} width="100%" height={200} border="8px" />
+                </VStack>
             </>
         );
     } else if (error) {
@@ -93,31 +98,30 @@ export const ArticleDetailsComponent = memo((props: ArticleDetailsProps) => {
     } else {
         content = (
             <>
-                <div className={cls.avatar_wrapper}>
+                <HStack justify="center" max>
                     <Avatar size={200} src={article?.img} className={cls.avatar} />
-                </div>
-                <Text
-                    className={cls.title}
-                    title={article?.title}
-                    text={article?.subtitle}
-                />
-                <div className={cls.article_info}>
-                    {/* eslint-disable-next-line i18next/no-literal-string */}
-                    <Icon Svg={EyeIcon} fill={ColorsEnum.PRIMARY} size="24px" />
+                </HStack>
+                <VStack gap="4" max>
                     <Text
-                        className={cls.info}
-                        text={String(article?.views)}
-                        size={TextSize.L}
+                        title={article?.title}
+                        text={article?.subtitle}
                     />
-                </div>
-                <div className={cls.article_info}>
-                    {/* eslint-disable-next-line i18next/no-literal-string */}
-                    <Icon Svg={CalendarIcon} fill={ColorsEnum.PRIMARY} size="24px" />
-                    <Text
-                        className={cls.info}
-                        text={article?.createdAt}
-                    />
-                </div>
+                    <HStack gap="8">
+                        {/* eslint-disable-next-line i18next/no-literal-string */}
+                        <Icon Svg={EyeIcon} fill={ColorsEnum.PRIMARY} size="24px" />
+                        <Text
+                            text={String(article?.views)}
+                            size={TextSize.L}
+                        />
+                    </HStack>
+                    <HStack gap="8">
+                        {/* eslint-disable-next-line i18next/no-literal-string */}
+                        <Icon Svg={CalendarIcon} fill={ColorsEnum.PRIMARY} size="24px" />
+                        <Text
+                            text={article?.createdAt}
+                        />
+                    </HStack>
+                </VStack>
                 {article?.blocks.map(renderBlock)}
             </>
         );
@@ -125,9 +129,12 @@ export const ArticleDetailsComponent = memo((props: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.article_details_component, {}, [className])}>
+            <VStack
+                gap="16"
+                className={classNames(cls.article_details_component, {}, [className])}
+            >
                 {content}
-            </div>
+            </VStack>
         </DynamicModuleLoader>
     );
 });

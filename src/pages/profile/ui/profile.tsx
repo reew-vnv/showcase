@@ -24,6 +24,7 @@ import { Text, TextTheme } from 'shared/ui/text/text';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useParams } from 'react-router-dom';
 import { Page } from 'widgets/page/page';
+import { VStack } from 'shared/ui/stack/vstack/vstack';
 import { ProfileHeader } from './profile-header/profile-header';
 
 const reducers: ReducersList = {
@@ -79,24 +80,26 @@ const Profile = ({ className }: ProfileProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames('', {}, [className])}>
-                <ProfileHeader />
-                {validateErrors?.length && validateErrors.map((error) => (
-                    <Text
-                        key={error}
-                        theme={TextTheme.ERROR}
-                        text={validateErrorTranslates[error]}
+                <VStack gap="16" max>
+                    <ProfileHeader />
+                    {validateErrors?.length && validateErrors.map((error) => (
+                        <Text
+                            key={error}
+                            theme={TextTheme.ERROR}
+                            text={validateErrorTranslates[error]}
+                        />
+                    )) }
+                    <ProfileCard
+                        data={form}
+                        isLoading={isLoading}
+                        error={error}
+                        readonly={readonly}
+                        onChangeCurrency={onChangeCurrency}
+                        onChangeCountry={onChangeCountry}
+                        handleChange={handleChange}
+                        setCurrentField={setCurrentField}
                     />
-                )) }
-                <ProfileCard
-                    data={form}
-                    isLoading={isLoading}
-                    error={error}
-                    readonly={readonly}
-                    onChangeCurrency={onChangeCurrency}
-                    onChangeCountry={onChangeCountry}
-                    handleChange={handleChange}
-                    setCurrentField={setCurrentField}
-                />
+                </VStack>
             </Page>
         </DynamicModuleLoader>
     );
