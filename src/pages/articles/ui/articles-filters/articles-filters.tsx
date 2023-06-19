@@ -69,7 +69,6 @@ export const ArticlesFilters = memo(({ className }: ArticlesFiltersProps) => {
         fetchData();
     }, [dispatch, fetchData]);
 
-    console.log({ type });
     return (
         <div className={classNames(cls.articles_filters, {}, [className])}>
             <div className={cls.sort_wrapper}>

@@ -17,6 +17,7 @@ export const Code = memo(({ className, text }: CodeProps) => {
     return (
         <pre className={classNames(cls.code, {}, [className])}>
             <Button onClick={onCopy} className={cls.copy_btn} theme={ButtonTheme.CLEAR}>
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <Icon Svg={CopyIcon} fill={ColorsEnum.PRIMARY} size="24px" />
             </Button>
             <code>

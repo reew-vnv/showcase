@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { ArticleEdit } from './article-edit';
+import ArticleEdit from './article-edit';
 
 export default {
     title: '*/article-edit',

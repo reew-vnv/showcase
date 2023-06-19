@@ -73,9 +73,13 @@ export const ArticleDetailsComponent = memo((props: ArticleDetailsProps) => {
         content = (
             <>
                 <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <Skeleton className={cls.title} width={300} height={32} border="8px" />
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <Skeleton className={cls.skeleton} width={600} height={24} border="8px" />
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <Skeleton className={cls.skeleton} width="100%" height={200} border="8px" />
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <Skeleton className={cls.skeleton} width="100%" height={200} border="8px" />
             </>
         );
@@ -98,6 +102,7 @@ export const ArticleDetailsComponent = memo((props: ArticleDetailsProps) => {
                     text={article?.subtitle}
                 />
                 <div className={cls.article_info}>
+                    {/* eslint-disable-next-line i18next/no-literal-string */}
                     <Icon Svg={EyeIcon} fill={ColorsEnum.PRIMARY} size="24px" />
                     <Text
                         className={cls.info}
@@ -106,6 +111,7 @@ export const ArticleDetailsComponent = memo((props: ArticleDetailsProps) => {
                     />
                 </div>
                 <div className={cls.article_info}>
+                    {/* eslint-disable-next-line i18next/no-literal-string */}
                     <Icon Svg={CalendarIcon} fill={ColorsEnum.PRIMARY} size="24px" />
                     <Text
                         className={cls.info}

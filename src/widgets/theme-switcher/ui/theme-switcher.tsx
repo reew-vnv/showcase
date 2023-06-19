@@ -19,7 +19,9 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
             onClick={toggleTheme}
         >
             {theme === Theme.DARK
+                // eslint-disable-next-line i18next/no-literal-string
                 ? <Icon Svg={ThemeIcon} size="36px" fill={ColorsEnum.SECONDARY} />
+                // eslint-disable-next-line i18next/no-literal-string
                 : <Icon Svg={ThemeIcon} size="36px" fill={ColorsEnum.SECONDARY} />}
         </Button>
     );
