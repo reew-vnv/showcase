@@ -142,15 +142,13 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
-      "avatar": "https://static.vecteezy.com/system/resources/previews/002/410/747/original/cute-siamese-cat-on-yellow-background-free-photo.jpg"
+      "role": "ADMIN"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
-      "avatar": "https://a.d-cd.net/dbf5d02s-960.jpg"
+      "role": "USER"
     }
   ],
   "profile": [
@@ -159,11 +157,11 @@
       "firstname": "Andrei",
       "lastname": "Ivanov AAA",
       "age": 29,
-      "currency": "EUR",
-      "country": "Hungary",
+      "currency": "USD",
+      "country": "England",
       "city": "London Amerika",
       "username": "admin",
-      "avatar": "https://static.vecteezy.com/system/resources/previews/002/410/747/original/cute-siamese-cat-on-yellow-background-free-photo.jpg"
+      "avatar": "https://wallpapers.com/images/hd/cool-profile-picture-ld8f4n1qemczkrig.jpg"
     },
     {
       "id": "2",
@@ -174,7 +172,7 @@
       "country": "Hungary",
       "city": "Budapest City",
       "username": "user",
-      "avatar": "https://www.clipartmax.com/png/middle/123-1236782_these-are-some-cats-avatar-i-drew-during-my-free-time-portrait.png"
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9MYov25_IQCTC0hok8INginRjjxummfDmwWmmlD6Q&s"
     }
   ],
   "articles": [

@@ -84,6 +84,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 </HStack>
             )}
             <Input
+                value={data?.username}
+                placeholder={t('Username')}
+                className={cls.input}
+                readonly
+            />
+            <Input
                 value={data?.firstname}
                 placeholder={t('Firstname')}
                 className={cls.input}
@@ -114,14 +120,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 onChange={handleChange}
                 readonly={readonly}
                 onSelect={() => setCurrentField('city')}
-            />
-            <Input
-                value={data?.username}
-                placeholder={t('UserName')}
-                className={cls.input}
-                onChange={handleChange}
-                readonly={readonly}
-                onSelect={() => setCurrentField('username')}
             />
             <Input
                 value={data?.avatar}

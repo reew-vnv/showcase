@@ -31,7 +31,6 @@
     position: absolute;
     z-index: 10000;
     border-radius: 8px;
-    width: 100%;
 }
 
 .item {
@@ -56,8 +55,24 @@
     border-radius: 8px;
 }
 
-.options_top {
+.options_top_left {
     bottom: 100%;
+    right: 0;
+}
+
+.options_top_right {
+    bottom: 100%;
+    left: 0;
+}
+
+.options_bottom_left {
+    top: 100%;
+    right: 0;
+}
+
+.options_bottom_right {
+    top: 100%;
+    left: 0;
 }
 
 .label {

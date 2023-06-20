@@ -1,4 +1,6 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, {
+    memo, useCallback, useState,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/button/button';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +10,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/text/text';
 import { getUserAuthData, userActions } from 'entities/user';
 import { RoutePath } from 'shared/config/route-config/route-config';
+import { Dropdown } from 'shared/ui/dropdown/dropdown';
+import { Avatar } from 'shared/ui/avatar/avatar';
+import { getProfileData } from 'entities/profile';
 import cls from './navbar.module.scss';
 
 interface NavbarProps {
@@ -19,6 +24,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const dispatch = useDispatch();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
+    const user = useSelector(getProfileData);
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -47,13 +53,21 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 >
                     {t('Create article')}
                 </AppLink>
-                <Button
-                    theme={ButtonTheme.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
-                    {t('Sign Out')}
-                </Button>
+                <Dropdown
+                    className={cls.dropdown}
+                    direction="bottom left"
+                    items={[
+                        {
+                            content: t('User Profile'),
+                            href: RoutePath.profile + authData.id,
+                        },
+                        {
+                            content: t('Sign Out'),
+                            onClick: onLogout,
+                        },
+                    ]}
+                    trigger={<Avatar size={30} src={user?.avatar} />}
+                />
             </header>
         );
     }

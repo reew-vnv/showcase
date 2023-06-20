@@ -26,13 +26,38 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
+    decorators: [
+        (Story) => <div style={{ padding: '150px' }}><Story /></div>,
+    ],
 } as ComponentMeta<typeof ListBox>;
 
 // @ts-ignore
 const Template: ComponentStory<typeof Input> = (args) => <ListBox {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const PrimaryTopRight = Template.bind({});
+PrimaryTopRight.args = {
     items: people,
     defaultValue: people[0].value,
+    direction: 'top right',
+};
+
+export const PrimaryTopLeft = Template.bind({});
+PrimaryTopLeft.args = {
+    items: people,
+    defaultValue: people[0].value,
+    direction: 'top left',
+};
+
+export const PrimaryBottomRight = Template.bind({});
+PrimaryBottomRight.args = {
+    items: people,
+    defaultValue: people[0].value,
+    direction: 'bottom right',
+};
+
+export const PrimaryBottomLeft = Template.bind({});
+PrimaryBottomLeft.args = {
+    items: people,
+    defaultValue: people[0].value,
+    direction: 'bottom left',
 };

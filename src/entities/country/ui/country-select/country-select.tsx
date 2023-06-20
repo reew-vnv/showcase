@@ -38,7 +38,7 @@ export const CountrySelect = memo(({
             label={t('Choose Country')}
             items={options}
             onChange={onChangeHandler}
-            direction="top"
+            direction="top right"
         />
     );
 });
