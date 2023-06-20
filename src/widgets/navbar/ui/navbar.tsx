@@ -12,7 +12,6 @@ import { getUserAuthData, userActions } from 'entities/user';
 import { RoutePath } from 'shared/config/route-config/route-config';
 import { Dropdown } from 'shared/ui/dropdown/dropdown';
 import { Avatar } from 'shared/ui/avatar/avatar';
-import { getProfileData } from 'entities/profile';
 import cls from './navbar.module.scss';
 
 interface NavbarProps {
@@ -24,7 +23,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const dispatch = useDispatch();
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
-    const user = useSelector(getProfileData);
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
@@ -66,7 +64,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                             onClick: onLogout,
                         },
                     ]}
-                    trigger={<Avatar size={30} src={user?.avatar} />}
+                    trigger={<Avatar size={30} src={authData?.avatar} />}
                 />
             </header>
         );
