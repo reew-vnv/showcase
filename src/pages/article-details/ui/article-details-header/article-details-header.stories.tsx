@@ -3,7 +3,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ArticleDetailsHeader } from './article-details-header';
 
 export default {
-    title: '*/article-details-header',
+    title: 'entities/article-details-header',
     component: ArticleDetailsHeader,
     argTypes: {
         backgroundColor: { control: 'color' },

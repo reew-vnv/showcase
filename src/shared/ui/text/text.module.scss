@@ -30,6 +30,18 @@
     text-align: center;
 }
 
+.size_s {
+    .title {
+        font: var(--font-s);
+        font-weight: bold;
+    }
+
+    .text {
+        font: var(--font-s);
+        font-weight: normal;
+    }
+}
+
 .size_m {
     .title {
         font: var(--font-l);

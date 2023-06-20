@@ -1,9 +1,10 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/store-decorator/store-decorator';
 import ArticleEdit from './article-edit';
 
 export default {
-    title: '*/article-edit',
+    title: 'pages/article-edit',
     component: ArticleEdit,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -14,3 +15,4 @@ const Template: ComponentStory<typeof ArticleEdit> = (args) => <ArticleEdit {...
 
 export const Primary = Template.bind({});
 Primary.args = {};
+Primary.decorators = [StoreDecorator({})];
