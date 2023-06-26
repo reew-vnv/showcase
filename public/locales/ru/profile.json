@@ -18,5 +18,6 @@
   "Incorrect Country": "Страна указана неверно",
   "Incorrect Currency": "Валюта указана неверно",
   "No Data": "Нет Данных",
-  "Server Error": "Серверная Ошибка"
+  "Server Error": "Серверная Ошибка",
+  "Profile not Found": "Профайл не Найден"
 }

@@ -18,5 +18,6 @@
   "Incorrect Country": "Incorrect Country",
   "Incorrect Currency": "Incorrect Currency",
   "No Data": "No Data",
-  "Server Error": "Server Error"
+  "Server Error": "Server Error",
+  "Profile not Found": "Profile not Found"
 }

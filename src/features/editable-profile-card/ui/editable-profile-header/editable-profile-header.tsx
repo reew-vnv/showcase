@@ -1,24 +1,23 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { useSelector } from 'react-redux';
+import { getUserAuthData } from 'entities/user';
+import { HStack } from 'shared/ui/stack';
 import { Text } from 'shared/ui/text/text';
 import { Button, ButtonTheme } from 'shared/ui/button/button';
-import { useSelector } from 'react-redux';
+import { getProfileData, getProfileReadonly } from '../../model/selectors';
+import { profileActions } from '../../model/slice/profile-slice';
 import {
-    getProfileData,
-    getProfileReadonly,
-    profileActions,
     updateProfileData,
-} from 'entities/profile';
-import { useCallback } from 'react';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { getUserAuthData } from 'entities/user';
-import { HStack } from 'shared/ui/stack/hstack/hstack';
+} from '../../model/services/update-profile-data/update-profile-data';
 
-interface ProfileHeaderProps {
+interface EditableProfileHeaderProps {
     className?: string,
 }
 
-export const ProfileHeader = ({ className }: ProfileHeaderProps) => {
+export const EditableProfileHeader = memo(({ className }: EditableProfileHeaderProps) => {
     const dispatch = useAppDispatch();
     const { t } = useTranslation('profile');
     const readonly = useSelector(getProfileReadonly);
@@ -70,4 +69,4 @@ export const ProfileHeader = ({ className }: ProfileHeaderProps) => {
             )}
         </HStack>
     );
-};
+});

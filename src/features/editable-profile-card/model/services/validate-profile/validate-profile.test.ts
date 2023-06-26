@@ -1,6 +1,6 @@
 import { Country } from 'entities/country';
 import { Currency } from 'entities/currency';
-import { ValidateProfileError } from '../../types/profile';
+import { ValidateProfileError } from '../../types/editable-profile-card-schema';
 import { validateProfile } from '../validate-profile/validate-profile';
 
 jest.mock('axios');

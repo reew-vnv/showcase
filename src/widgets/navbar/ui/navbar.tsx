@@ -4,7 +4,7 @@ import React, {
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/button/button';
 import { useTranslation } from 'react-i18next';
-import { LoginModal } from 'features/auth_by_username';
+import { LoginModal } from 'features/auth-by-username';
 import { AppLink, AppLinkTheme } from 'shared/ui/app-link/app-link';
 import { useDispatch, useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/text/text';
