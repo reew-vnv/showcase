@@ -96,6 +96,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 onChange={handleChange}
                 readonly={readonly}
                 onSelect={() => setCurrentField('firstname')}
+                data-testid="profile-card.firstname"
             />
             <Input
                 value={data?.lastname}
@@ -104,6 +105,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 onChange={handleChange}
                 readonly={readonly}
                 onSelect={() => setCurrentField('lastname')}
+                data-testid="profile-card.lastname"
             />
             <Input
                 value={data?.age}

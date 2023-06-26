@@ -12,6 +12,7 @@ import {
     DynamicModuleLoader, ReducersList,
 } from 'shared/lib/components/dynamic-module-loader/dynamic-module-loader';
 import { VStack } from 'shared/ui/stack';
+import { EditableProfileHeader } from '../editable-profile-header/editable-profile-header';
 import { ValidateProfileError } from '../../model/types/editable-profile-card-schema';
 import {
     getProfileForm, getProfileIsLoading, getProfileError,
@@ -79,11 +80,13 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                 max
                 className={classNames('', {}, [className])}
             >
+                <EditableProfileHeader />
                 {validateErrors?.length && validateErrors.map((error) => (
                     <Text
                         key={error}
                         theme={TextTheme.ERROR}
                         text={validateErrorTranslates[error]}
+                        data-testid="editable-profile-card.error"
                     />
                 )) }
                 <ProfileCard
