@@ -34,5 +34,7 @@
   "Articles not found": "Статьи не найдены",
   "Showcase": "Showcase",
   "Create article": "Создать статью",
-  "User Profile": "Профиль Пользователя"
+  "User Profile": "Профиль Пользователя",
+  "Admin Panel": "Панель Администратора",
+  "You are not allowed to visit this Page": "У Вас нет доступа к данной странице"
 }
